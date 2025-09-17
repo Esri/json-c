@@ -2,7 +2,7 @@
 #define _json_config_h_
 
 #if defined(RTC_COCOA_FAMILY)
-#include "config_macos.h"
+#include "config_mac.h"
 #elif defined(RTC_LINUX_FAMILY)
 #include "config_linux.h"
 #elif defined(RTC_WINDOWS_FAMILY)
