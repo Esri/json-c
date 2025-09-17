@@ -11,26 +11,30 @@ flags { "NoPCH" }
 includedirs {
   _3RDPARTY_DIR .. "/json-c",
   _3RDPARTY_DIR .. "/json-c/src_generated", -- RTC generated files
+  _3RDPARTY_DIR .. "/json-c/src_generated/port", -- RTC generated files per platform
 }
 
 defines {
 }
 
 files {
-    "arraylist.c",
-    "debug.c",
-    "json_c_version.c",
-    "json_object.c",
-    "json_object_iterator.c",
-    "json_tokener.c",
-    "json_util.c",
-    "json_visit.c",
-    "linkhash.c",
-    "printbuf.c",
-    "random_seed.c",
-    "strerror_override.c",
-    "json_pointer.c",
-    "json_patch.c",
+  -- "apps/...", -- application code
+  "arraylist.c",
+  -- "debug.c", -- debug code
+  "json_c_version.c",
+  "json_object.c",
+  "json_object_iterator.c",
+  "json_patch.c",
+  "json_pointer.c",
+  "json_tokener.c",
+  "json_util.c",
+  "json_visit.c",
+  -- "libjson.c", -- library things
+  "linkhash.c",
+  "printbuf.c",
+  "random_seed.c",
+  "strerror_override.c",
+  -- "tests/...", -- test code
 }
 
 if (_PLATFORM_ANDROID) then
