@@ -37,6 +37,13 @@ files {
   -- "tests/...", -- test code
 }
 
+if (not _PLATFORM_WINDOWS) then
+  defines {
+    "_GNU_SOURCE", -- https://man7.org/linux/man-pages/man7/feature_test_macros.7.html needed to use C extentions
+    "_REENTRANT",
+  }
+end
+
 if (_PLATFORM_ANDROID) then
 end
 
