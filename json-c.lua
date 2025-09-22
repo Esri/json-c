@@ -20,7 +20,7 @@ defines {
 files {
   -- "apps/...", -- application code
   "arraylist.c",
-  -- "debug.c", -- debug code
+  "debug.c", -- needed for _debug targets
   "json_c_version.c",
   "json_object.c",
   "json_object_iterator.c",
