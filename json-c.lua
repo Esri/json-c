@@ -14,11 +14,7 @@ includedirs {
   _3RDPARTY_DIR .. "/json-c/src_generated/port", -- RTC generated files per platform
 }
 
-defines {
-}
-
 files {
-  -- "apps/...", -- application code
   "arraylist.c",
   "debug.c", -- needed for _debug targets
   "json_c_version.c",
@@ -29,12 +25,10 @@ files {
   "json_tokener.c",
   "json_util.c",
   "json_visit.c",
-  -- "libjson.c", -- library things
   "linkhash.c",
   "printbuf.c",
   "random_seed.c",
   "strerror_override.c",
-  -- "tests/...", -- test code
 }
 
 if (not _PLATFORM_WINDOWS) then
