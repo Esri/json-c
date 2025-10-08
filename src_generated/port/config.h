@@ -1,7 +1,13 @@
 #ifndef _json_config_h_
 #define _json_config_h_
 
-#if defined(RTC_COCOA_FAMILY)
+#if defined(RTC_COCOA_IOS)
+    #if defined(RTC_COCOA_CATALYST)
+        #include "config_ios_catarm64_catx64.h"
+    #else
+        #include "config_ios_arm64_simarm64_simx64.h"
+    #endif
+#elif defined(RTC_COCOA_FAMILY)
     #include "config_macos.h"
 #elif defined(RTC_LINUX_DESKTOP)
     #include "config_linux.h"
